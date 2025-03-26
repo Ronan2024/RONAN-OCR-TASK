@@ -1,0 +1,14 @@
+from gpiozero import AngularServo
+from time import sleep
+
+# Create an AngularServo object connected to GPIO pin 18
+servo = AngularServo(18, min_angle=-90, max_angle=90)
+
+# Move the servo to 90 degrees
+servo.angle = 90
+
+# Wait for 5 second
+sleep(5)
+
+# Return to the center position (0 degrees)
+servo.angle = 0
